@@ -71,7 +71,14 @@ app.post("/login",AuthjsonToekn,async(req,res)=>{
     )
 })
 
-
+// ---------------------------logout function----------------------
+app.post("/logout",async(req,res)=>{
+    const token=req.cookies
+    if(token){
+        res.clearCookie("itsToken")
+        res.status(200).json("Logout sucessfully.")
+    }
+})
 
 
 app.listen(process.env.PORT,()=>{

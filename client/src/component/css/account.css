@@ -1,0 +1,38 @@
+.main_account{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    gap: 10rem;
+    font-size: 1.8rem;
+}
+.main_account a{
+    text-decoration: none;
+}
+.color_toggle{
+    background-color: var(--theme_color);
+    padding: 0.8rem 1rem;
+    border-radius: 3rem;
+    color: white;
+}
+.gray_toggle{
+    background-color:rgb(237, 222, 222);
+    padding: 0.8rem 1rem;
+    border-radius: 3rem;
+    color: black; 
+}
+
+@media(max-width:743px){
+    .main_account{
+        margin-top: 5rem;
+        gap: 1rem;
+        font-size: 1.4rem;
+        color: white;
+    }
+    .color_toggle{
+        padding: 0.8rem 0.5rem;
+    }
+    .gray_toggle{
+        padding: 0.8rem 0.5rem; 
+    }
+}

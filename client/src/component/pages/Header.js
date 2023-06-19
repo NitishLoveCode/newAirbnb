@@ -39,6 +39,8 @@ export default function Header() {
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
                     </div>
+                        
+                        {/* {userinfo? <p>{`${userinfo.name.slice(0,5)}..`}</p>: */}
                         <div className="user_img">
                             <Link to={userinfo? "/account" : "/login"}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -46,6 +48,7 @@ export default function Header() {
                             </svg>
                             </Link>
                         </div>
+                        {/* } */}
                 </div>
             </nav>
         </header>

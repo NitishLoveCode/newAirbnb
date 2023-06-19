@@ -1,0 +1,25 @@
+.main_profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+    font-size: 2rem;
+    gap: 2rem;
+    text-align: center;
+}
+.main_profile button{
+    width:  30vw;
+    height: 4rem;
+    background-color: var(--theme_color);
+    color: white;
+    border-radius: 3rem;
+    font-size: 1.8rem;
+    border: none;
+}
+
+@media(max-width:743px){
+    .main_profile button{
+        width: 80vw;
+    }
+}
