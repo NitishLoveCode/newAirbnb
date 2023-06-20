@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import "../css/account.css"
 import { Link, useParams } from 'react-router-dom'
 import Myprofile from './Myprofile'
+import Addnewplace from './Addnewplace'
+import Createplace from './Createplace'
 
 export default function Account() {
-    const[toggle,settoggle]=useState(false)
 
     const {subpage}=useParams()
 
@@ -24,6 +25,9 @@ export default function Account() {
     </div>
     <div className="result_bar">
          {subpage===undefined? <Myprofile/>:""}
+         {subpage==="my-accomondatation"? <Addnewplace/>:""}
+         {subpage==="create-new-place"? <Createplace/>:""}
+
     </div>
     </>
 

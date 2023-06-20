@@ -1,0 +1,123 @@
+.main_place{
+    /* background-color: red; */
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    margin: 5rem auto;
+    color: rgb(46, 45, 45);
+}
+
+.fields h2{
+    font-size: 2.5rem;
+
+}
+.fields{
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+.fields #input{
+    width: 90vw;
+    height: 4rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    padding-left: 0.8rem;
+    border: none;
+    background-color: rgb(217, 217, 217);
+    outline-color: rgb(153, 187, 251);
+}
+
+.fields .add_by_url{
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
+    align-items: center;
+    
+}
+.fields .add_by_url #input{
+    width: 80%;
+}
+.fields .add_by_url button{
+    width: 35%;
+    height: 4rem;
+    background-color: var(--theme_color);
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+}
+.fields .local_upload button{
+    width: 15rem;
+    justify-content: center;
+    gap: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    height: 6rem;
+    border-radius: 1rem;
+    border: 0.1rem solid gray;
+}
+.fields .local_upload button svg{
+    width: 3rem;
+}
+
+.fields #description{
+    height: 15rem;
+    width: 90vw;
+    padding: 0rem 1rem;
+    outline-color: rgb(153, 187, 251);
+    font-size: 1.6rem;
+    border-radius: 1rem;
+}
+
+.main_perks{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.all_perks{
+    display: flex;
+    align-items: center;
+    border: 0.1rem solid gray;
+    width: 27vw;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    padding: 0rem 1rem;
+    gap: 1rem;
+    align-items: center;
+}
+.all_perks input{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.all_perks svg{
+    width: 3rem;
+}
+.fields #inandout{
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.final_save{
+    display: flex;
+    justify-content: center;
+}
+.final_save button{
+    width: 100%;
+    border-radius: 1rem;
+    background-color: var(--theme_color);
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    height: 3.5rem;
+    cursor: pointer;
+}
+
+
+@media(max-width:743px){
+    .all_perks{
+        width: 100%;
+    }
+}
