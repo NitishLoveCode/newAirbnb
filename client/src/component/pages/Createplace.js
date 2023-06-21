@@ -87,6 +87,48 @@ export default function Createplace() {
             console.log(err)
         }
     }
+
+
+    // const[title,settitle]=useState('')
+    // const[address,setaddress]=useState('')
+    // const[urlphoto, seturlphoto]=useState('')
+    // const[allimages,setallimages]=useState([])
+    // const[description, setdescription]=useState('')
+    // const[allperks,setallperks]=useState([])
+    // const[extrainfo,setextrainfo]=useState('')
+    // const[checktime,setchecktime]=useState({
+    //     in_time:"", out_time:"", max_guest:""
+    // })
+    // ---------------------------------create_new_post-------------------
+
+    const create_new_post=async(e)=>{
+        e.preventDefault()
+        if(title,address,allimages,description,allperks,extrainfo,checktime){
+            try{
+                const res=await fetch("http://localhost:8000/new-post",{
+                    credentials:'include',
+                    method:"POST",
+                    headers:{
+                        "content-type":"application/json"
+                    },
+                    body:JSON.stringify({
+                        title,
+                        address,
+                        allimages,
+                        description,
+                        allperks,
+                        extrainfo,
+                        checktime
+                    })
+                })
+            }catch(err){
+                console.log(err)
+            }
+
+        }else(
+            alert('Fill all require form.')
+        )
+    }
     
 
   return (
@@ -260,7 +302,7 @@ export default function Createplace() {
                         </div>
 
                        <div className="final_save">
-                        <button>Create Place</button>
+                        <button onClick={create_new_post}>Create Place</button>
                        </div>
             </form>
         </div>
