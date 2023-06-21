@@ -114,6 +114,13 @@ app.post("/local-img-upload",photoMiddleware.array("photos",100),async(req,res)=
 })
 
 
+// ----------------------------------------new post------------------------
+app.post("/new-post",async(req,res)=>{
+    const data=req.body
+    console.log(data)
+})
+
+
 app.listen(process.env.PORT,()=>{
     console.log(`server is started at ${process.env.PORT}`)
 })
