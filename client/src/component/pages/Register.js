@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import "../css/login.css"
 import { Link, useNavigate } from 'react-router-dom'
+import {auth,provider} from "../../googleAuth/config"
+import { signInWithPopup } from 'firebase/auth'
+
+
 export default function Register() {
   const navigate=useNavigate()
   const[name,setname]=useState()
@@ -11,6 +15,16 @@ export default function Register() {
   const [worngpass, setwrongpass]=useState(false)
   const[fillerr,setfillerr]=useState(false)
   const[dublicateEmail, setdublicateEmail]=useState(false)
+
+// ---------------------------signInwithgoogle-------------
+
+  const signInwithgoogle=(e)=>{
+    e.preventDefault()
+    signInWithPopup(auth,provider).then((data)=>{
+      console.log(data)
+    })
+  }
+
 
   const register=async()=>{
     
@@ -100,6 +114,7 @@ export default function Register() {
               value={Cpassword} onChange={e=>setCpassword(e.target.value)}
             />
             <button onClick={register}>Register</button>
+            <button onClick={signInwithgoogle}>Sign in with google</button>
             <span>Already have an account <Link to={"/login"}>Login</Link></span>
         </div>
     </>
